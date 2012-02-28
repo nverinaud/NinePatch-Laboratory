@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3749A30D14FD1E8C00196FF6 /* libNinePatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3749A30914FD1E8500196FF6 /* libNinePatch.a */; };
+		3749A30F14FD1EEC00196FF6 /* button.9.png in Resources */ = {isa = PBXBuildFile; fileRef = 3749A30E14FD1EEC00196FF6 /* button.9.png */; };
+		3749A31314FD1F1400196FF6 /* TUNinePatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3749A31114FD1F1400196FF6 /* TUNinePatchViewController.m */; };
+		3749A31414FD1F1400196FF6 /* TUNinePatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3749A31214FD1F1400196FF6 /* TUNinePatchViewController.xib */; };
 		37DEE49614FD087900A85A0B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DEE49514FD087900A85A0B /* UIKit.framework */; };
 		37DEE49814FD087900A85A0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DEE49714FD087900A85A0B /* Foundation.framework */; };
 		37DEE49A14FD087900A85A0B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DEE49914FD087900A85A0B /* CoreGraphics.framework */; };
@@ -21,7 +25,29 @@
 		37DEE4C214FD093600A85A0B /* ContentStretchBuiltInNinePatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DEE4B314FD08CC00A85A0B /* ContentStretchBuiltInNinePatchViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3749A30814FD1E8500196FF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3749A30114FD1E8500196FF6 /* NinePatch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = NinePatch;
+		};
+		3749A30B14FD1E8900196FF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3749A30114FD1E8500196FF6 /* NinePatch.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = NinePatch;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3749A30114FD1E8500196FF6 /* NinePatch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NinePatch.xcodeproj; path = ../NinePatch/NinePatch.xcodeproj; sourceTree = "<group>"; };
+		3749A30E14FD1EEC00196FF6 /* button.9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.9.png; sourceTree = "<group>"; };
+		3749A31014FD1F1400196FF6 /* TUNinePatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TUNinePatchViewController.h; sourceTree = "<group>"; };
+		3749A31114FD1F1400196FF6 /* TUNinePatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TUNinePatchViewController.m; sourceTree = "<group>"; };
+		3749A31214FD1F1400196FF6 /* TUNinePatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TUNinePatchViewController.xib; sourceTree = "<group>"; };
 		37DEE49114FD087900A85A0B /* NinePatch Laboratory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NinePatch Laboratory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DEE49514FD087900A85A0B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37DEE49714FD087900A85A0B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3749A30D14FD1E8C00196FF6 /* libNinePatch.a in Frameworks */,
 				37DEE49614FD087900A85A0B /* UIKit.framework in Frameworks */,
 				37DEE49814FD087900A85A0B /* Foundation.framework in Frameworks */,
 				37DEE49A14FD087900A85A0B /* CoreGraphics.framework in Frameworks */,
@@ -61,8 +88,17 @@
 		3749A2E414FD1D0800196FF6 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				3749A30114FD1E8500196FF6 /* NinePatch.xcodeproj */,
 			);
 			name = Vendors;
+			sourceTree = "<group>";
+		};
+		3749A30214FD1E8500196FF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3749A30914FD1E8500196FF6 /* libNinePatch.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		37DEE48614FD087900A85A0B = {
@@ -100,8 +136,8 @@
 			children = (
 				37DEE4A414FD087900A85A0B /* AppDelegate.h */,
 				37DEE4A514FD087900A85A0B /* AppDelegate.m */,
-				37DEE4AE14FD08CC00A85A0B /* Resources */,
 				37DEE4B114FD08CC00A85A0B /* View Controllers */,
+				37DEE4AE14FD08CC00A85A0B /* Resources */,
 			);
 			path = "NinePatch Laboratory";
 			sourceTree = "<group>";
@@ -129,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				37DEE4B014FD08CC00A85A0B /* button.png */,
+				3749A30E14FD1EEC00196FF6 /* button.9.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -145,6 +182,9 @@
 				37DEE4B814FD08CC00A85A0B /* ContentStretchWithCapsViewController.h */,
 				37DEE4B914FD08CC00A85A0B /* ContentStretchWithCapsViewController.m */,
 				37DEE4BA14FD08CC00A85A0B /* ContentStretchWithCapsViewController.xib */,
+				3749A31014FD1F1400196FF6 /* TUNinePatchViewController.h */,
+				3749A31114FD1F1400196FF6 /* TUNinePatchViewController.m */,
+				3749A31214FD1F1400196FF6 /* TUNinePatchViewController.xib */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -163,6 +203,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3749A30C14FD1E8900196FF6 /* PBXTargetDependency */,
 			);
 			name = "NinePatch Laboratory";
 			productName = "NinePatch Laboratory";
@@ -188,12 +229,28 @@
 			mainGroup = 37DEE48614FD087900A85A0B;
 			productRefGroup = 37DEE49214FD087900A85A0B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3749A30214FD1E8500196FF6 /* Products */;
+					ProjectRef = 3749A30114FD1E8500196FF6 /* NinePatch.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				37DEE49014FD087900A85A0B /* NinePatch Laboratory */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3749A30914FD1E8500196FF6 /* libNinePatch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libNinePatch.a;
+			remoteRef = 3749A30814FD1E8500196FF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		37DEE48F14FD087900A85A0B /* Resources */ = {
@@ -204,6 +261,8 @@
 				37DEE4BD14FD08CC00A85A0B /* ContentStretchBuiltInNinePatchViewController.xib in Resources */,
 				37DEE4BF14FD08CC00A85A0B /* ContentStretchChoicesViewController.xib in Resources */,
 				37DEE4C114FD08CC00A85A0B /* ContentStretchWithCapsViewController.xib in Resources */,
+				3749A30F14FD1EEC00196FF6 /* button.9.png in Resources */,
+				3749A31414FD1F1400196FF6 /* TUNinePatchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,10 +278,19 @@
 				37DEE4BE14FD08CC00A85A0B /* ContentStretchChoicesViewController.m in Sources */,
 				37DEE4C014FD08CC00A85A0B /* ContentStretchWithCapsViewController.m in Sources */,
 				37DEE4C214FD093600A85A0B /* ContentStretchBuiltInNinePatchViewController.m in Sources */,
+				3749A31314FD1F1400196FF6 /* TUNinePatchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3749A30C14FD1E8900196FF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NinePatch;
+			targetProxy = 3749A30B14FD1E8900196FF6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		37DEE4A714FD087900A85A0B /* Debug */ = {
@@ -274,7 +342,7 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NinePatch Laboratory/NinePatch Laboratory-Prefix.pch";
-				HEADER_SEARCH_PATHS = "./Vendors/NinePatch/**";
+				HEADER_SEARCH_PATHS = "../NinePatch/**";
 				INFOPLIST_FILE = "NinePatch Laboratory/NinePatch Laboratory-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = (
@@ -291,7 +359,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NinePatch Laboratory/NinePatch Laboratory-Prefix.pch";
-				HEADER_SEARCH_PATHS = "./Vendors/NinePatch/**";
+				HEADER_SEARCH_PATHS = "../NinePatch/**";
 				INFOPLIST_FILE = "NinePatch Laboratory/NinePatch Laboratory-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";

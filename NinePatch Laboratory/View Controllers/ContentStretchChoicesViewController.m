@@ -10,6 +10,7 @@
 
 #import "ContentStretchWithCapsViewController.h"
 #import "ContentStretchBuiltInNinePatchViewController.h"
+#import "TUNinePatchViewController.h"
 
 @implementation ContentStretchChoicesViewController
 
@@ -34,7 +35,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 2;
+	return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -58,6 +59,9 @@
 			cell.textLabel.text = @"Built-in NinePatch";
 			break;
 			
+		case 2:
+			cell.textLabel.text = @"TUNinePatch";
+			
 		default:
 			break;
 	}
@@ -75,8 +79,15 @@
 			[self.navigationController pushViewController:[[[ContentStretchWithCapsViewController alloc] init] autorelease] animated:YES];
 			break;
 			
-		default:
+		case 1:
 			[self.navigationController pushViewController:[[[ContentStretchBuiltInNinePatchViewController alloc] init] autorelease] animated:YES];
+			break;
+			
+		case 2:
+			[self.navigationController pushViewController:[[[TUNinePatchViewController alloc] init] autorelease] animated:YES];
+			break;
+			
+		default:
 			break;
 	}
 }
