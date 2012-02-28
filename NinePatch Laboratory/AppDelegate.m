@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
 #import "ContentStretchChoicesViewController.h"
+
+#import "NinePatch.h"
 
 @implementation AppDelegate
 

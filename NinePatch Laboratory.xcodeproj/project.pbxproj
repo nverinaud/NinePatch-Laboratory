@@ -12,7 +12,6 @@
 		37DEE49A14FD087900A85A0B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DEE49914FD087900A85A0B /* CoreGraphics.framework */; };
 		37DEE4A214FD087900A85A0B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DEE4A114FD087900A85A0B /* main.m */; };
 		37DEE4A614FD087900A85A0B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DEE4A514FD087900A85A0B /* AppDelegate.m */; };
-		37DEE4AD14FD08C300A85A0B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 37DEE4AC14FD08C300A85A0B /* README.md */; };
 		37DEE4BB14FD08CC00A85A0B /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DEE4B014FD08CC00A85A0B /* button.png */; };
 		37DEE4BD14FD08CC00A85A0B /* ContentStretchBuiltInNinePatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DEE4B414FD08CC00A85A0B /* ContentStretchBuiltInNinePatchViewController.xib */; };
 		37DEE4BE14FD08CC00A85A0B /* ContentStretchChoicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DEE4B614FD08CC00A85A0B /* ContentStretchChoicesViewController.m */; };
@@ -59,10 +58,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3749A2E414FD1D0800196FF6 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Vendors;
+			sourceTree = "<group>";
+		};
 		37DEE48614FD087900A85A0B = {
 			isa = PBXGroup;
 			children = (
 				37DEE4AC14FD08C300A85A0B /* README.md */,
+				3749A2E414FD1D0800196FF6 /* Vendors */,
 				37DEE49B14FD087900A85A0B /* NinePatch Laboratory */,
 				37DEE49C14FD087900A85A0B /* Supporting Files */,
 				37DEE49414FD087900A85A0B /* Frameworks */,
@@ -193,7 +200,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37DEE4AD14FD08C300A85A0B /* README.md in Resources */,
 				37DEE4BB14FD08CC00A85A0B /* button.png in Resources */,
 				37DEE4BD14FD08CC00A85A0B /* ContentStretchBuiltInNinePatchViewController.xib in Resources */,
 				37DEE4BF14FD08CC00A85A0B /* ContentStretchChoicesViewController.xib in Resources */,
@@ -265,10 +271,16 @@
 		37DEE4AA14FD087900A85A0B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NinePatch Laboratory/NinePatch Laboratory-Prefix.pch";
+				HEADER_SEARCH_PATHS = "./Vendors/NinePatch/**";
 				INFOPLIST_FILE = "NinePatch Laboratory/NinePatch Laboratory-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -279,6 +291,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NinePatch Laboratory/NinePatch Laboratory-Prefix.pch";
+				HEADER_SEARCH_PATHS = "./Vendors/NinePatch/**";
 				INFOPLIST_FILE = "NinePatch Laboratory/NinePatch Laboratory-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -305,6 +318,7 @@
 				37DEE4AB14FD087900A85A0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
