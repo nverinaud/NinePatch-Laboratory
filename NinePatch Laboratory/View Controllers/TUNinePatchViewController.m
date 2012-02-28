@@ -7,40 +7,57 @@
 //
 
 #import "TUNinePatchViewController.h"
+#import "NinePatch.h"
 
 @implementation TUNinePatchViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+@synthesize imageView;
+
+- (void)dealloc
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+	[imageView release];
+	[super dealloc];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
-}
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+	self.title = @"TUNinePatch";
 }
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+	
+	UIImage *ninePatchOriginal = [UIImage imageNamed:@"button.9.png"];
+	self.imageView.image = ninePatchOriginal;
+	
+	TUNinePatch *ninePatch = [TUNinePatch ninePatchWithNinePatchImage:ninePatchOriginal];
+	
+	UIImageView *imgView = nil;
+	CGSize size = CGSizeZero;
+	for (UIView *view in self.view.subviews) 
+	{
+		if ([view isKindOfClass:[UIImageView class]] && view != self.imageView) 
+		{
+			imgView = (UIImageView *)view;
+			size = imgView.bounds.size;
+			imgView.image = [ninePatch imageOfSize:size];
+		}
+	}
+}
+
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+	self.imageView = nil;
 }
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

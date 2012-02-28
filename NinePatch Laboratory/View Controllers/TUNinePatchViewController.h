@@ -10,4 +10,6 @@
 
 @interface TUNinePatchViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UIImageView *imageView;
+
 @end
